@@ -1,0 +1,44 @@
+<?php if($paginator->lastPage() > 1): ?>
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="dataTables_info" id="example2_info" role="status" aria-live="polite"> <?php echo e($paginator->total()); ?>
+
+                entries
+            </div>
+        </div>
+        <div class="col-sm-7">
+            <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
+                <ul class="pagination">
+                    <li class="paginate_button previous  <?php echo e(($paginator->currentPage() == 1) ? ' disabled' : ''); ?>"
+                        id="example2_previous"><a
+                                href="<?php echo e(($paginator->currentPage() == 1) ? 'javascript:void(0);' : $paginator->url(1)); ?>"
+                                aria-controls="example2" data-dt-idx="0" tabindex="0"><i
+                                    class="fa fa-angle-double-left"></i></a></li>
+                    <li class="paginate_button previous  <?php echo e(($paginator->currentPage() == 1) ? ' disabled' : ''); ?>"
+                        id="example2_previous"><a
+                                href="<?php echo e(($paginator->currentPage() == 1) ? 'javascript:void(0);' : $paginator->url($paginator->currentPage()-1)); ?>"
+                                aria-controls="example2" data-dt-idx="0" tabindex="0"><i
+                                    class="fa fa-angle-left"></i></a></li>
+
+                    <?php for($i = 1; $i<=$paginator->lastPage(); $i++): ?>
+                        <?php if($i<($paginator->currentPage()+3) && $i>($paginator->currentPage()-3)): ?>
+                            <li class="paginate_button <?php echo e(($paginator->currentPage() == $i) ? ' active' : ''); ?>"><a
+                                        href="<?php echo e($paginator->url($i)); ?>" aria-controls="example2" data-dt-idx="1"
+                                        tabindex="0"><?php echo e($i); ?></a></li>
+                        <?php endif; ?>
+                    <?php endfor; ?>
+                    <li class="paginate_button next <?php echo e(($paginator->currentPage() == $paginator->lastPage()) ? ' disabled' : ''); ?>"
+                        id="example2_next">
+                        <a href="<?php echo e(($paginator->currentPage() == $paginator->lastPage()) ?'javascript:void(0);':$paginator->url($paginator->currentPage()+1)); ?>"
+                           aria-controls="example2" data-dt-idx="7" tabindex="0"><i class="fa fa-angle-right"></i></a>
+                    </li>
+                    <li class="paginate_button next <?php echo e(($paginator->currentPage() == $paginator->lastPage()) ? ' disabled' : ''); ?>"
+                        id="example2_next">
+                        <a href="<?php echo e(($paginator->currentPage() == $paginator->lastPage()) ?'javascript:void(0);':$paginator->url($paginator->lastPage())); ?>"
+                           aria-controls="example2" data-dt-idx="7" tabindex="0"><i
+                                    class="fa fa-angle-double-right"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<?php endif; ?>

@@ -1,0 +1,36 @@
+{
+  "name": "liuchengguos/framework",
+  "description": "",
+  "keywords": [],
+  "homepage": "",
+  "license": "MIT",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "guo",
+      "email": "164445438@qq.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "noahbuscher/macaw": "dev-master",
+    "illuminate/database": "*",
+    "filp/whoops": "*",
+    "xiaoler/blade":"*",
+    "predis/predis": "*",
+    "nette/mail": "*",
+    "tufanbarisyildirim/php-apk-parser":"dev-master",
+    "illuminate/support":"*",
+    "illuminate/pagination":"*",
+    "illuminate/view": "*",
+    "almasaeed2010/adminlte": "~2.0"
+  },
+  "autoload": {
+    "classmap": [
+      "app/Controllers",
+      "app/Models",
+      "services"
+    ]
+  },
+  "minimum-stability": "dev"
+}
