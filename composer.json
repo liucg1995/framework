@@ -2,8 +2,9 @@
   "name": "liuchengguos/framework",
   "description": "",
   "keywords": [],
-  "homepage": "",
+  "homepage": "https://packagist.org/packages/liuchengguos/framework",
   "license": "MIT",
+  "type": "project",
   "version": "1.0.0",
   "authors": [
     {
